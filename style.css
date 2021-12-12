@@ -1,6 +1,3 @@
-*{
-    color: #DDC9B3;
-}
 
 body{
     background-color: #DDC9B3;
@@ -66,12 +63,12 @@ label{
 .result{
     font-family: 'Raleway', sans-serif;
     display: grid;
-    grid-template-columns: 350px 90px 280px;
-    grid-template-areas: 
-    "i la a"
-    "i lpr p"
-    "i lr r"
-    "i lpark park";
+    grid-template-columns: 350px 190px 280px;
+    grid-template-areas:
+        "i la a"
+        "i lpr p"
+        "i lr r"
+        "i lpark park";
     box-shadow: 1px 1px 3px #0a1612;
     margin: 20px;
     padding: 20px;
@@ -110,7 +107,7 @@ button:active{background-color: #443729;}
     border-radius: 5px;
 }
 
-.result>.label{
+.result>label{
     font-weight: bold;
 }
 

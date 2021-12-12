@@ -38,7 +38,33 @@
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
+    <script id="apartments-template" type="text/x-handlebars-template">
+        {{#if apartments}}
+        {{#each apartments}}
+        <div class="result">
+            <img src={{img}} alt="Img Not Found">
+            <p class="l-addr">Address</p>
+            <p class="address">{{address}}</p>
+            <p class="l-price">Price</p>
+            <p class="price">{{price}}</p>
+            <p class="l-rooms">Rooms</p>
+            <p class="rooms">{{rooms}}</p>
+            {{#if parking}}
+            <div class="l-park">Parking</div>
+            <i class="fas fa-parking"></i>
+            {{/if}}
+            {{#if immediate}}
+            <p class="l-immediate">Contact Details</p>
+            <p class="immediate">name:{{contactDetails.name}} email:{{contactDetails.email}}</p>
+            {{/if}}
+        </div>
+        {{/each}}
+        {{else}}
+        <p class="no-match">No Apartments Found!</p>
+        {{/if}}
+    </script>
 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="apt-data.js"></script>
